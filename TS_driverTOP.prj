@@ -1,0 +1,5 @@
+vhdl work "ipcore_dir/ILA_CONTROL.vhd"
+vhdl work "TS_ctrl.vhd"
+vhdl work "ipcore_dir/ILA_core.vhd"
+vhdl work "i2c_master.vhd"
+vhdl work "TS_driverTOP.vhd"

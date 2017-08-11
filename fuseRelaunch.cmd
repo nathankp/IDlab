@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "I:/I2C_master/TS_driverTOPtb_isim_beh.exe" -prj "I:/I2C_master/TS_driverTOPtb_beh.prj" "work.TS_driverTOPtb" 

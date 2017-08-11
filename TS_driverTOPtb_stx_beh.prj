@@ -1,0 +1,6 @@
+vhdl isim_temp "ipcore_dir/ILA_CONTROL.vhd"
+vhdl isim_temp "TS_ctrl.vhd"
+vhdl isim_temp "ipcore_dir/ILA_core.vhd"
+vhdl isim_temp "i2c_master.vhd"
+vhdl isim_temp "TS_driverTOP.vhd"
+vhdl isim_temp "TS_driverTOPtb.vhd"

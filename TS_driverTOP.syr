@@ -1,0 +1,780 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.23 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.23 secs
+ 
+--> Reading design: TS_driverTOP.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "TS_driverTOP.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "TS_driverTOP"
+Output Format                      : NGC
+Target Device                      : xc3s400-4-pq208
+
+---- Source Options
+Top Module Name                    : TS_driverTOP
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "I:/I2C_master/TS_ctrl.vhd" in Library work.
+Architecture behavioral of Entity ts_ctrl is up to date.
+Compiling vhdl file "I:/I2C_master/i2c_master.vhd" in Library work.
+WARNING:HDLParsers:817 - "I:/I2C_master/i2c_master.vhd" Line 92. Choice .TO. is not a locally static expression.
+WARNING:HDLParsers:817 - "I:/I2C_master/i2c_master.vhd" Line 95. Choice .TO. is not a locally static expression.
+WARNING:HDLParsers:817 - "I:/I2C_master/i2c_master.vhd" Line 98. Choice .TO. is not a locally static expression.
+Architecture logic of Entity i2c_master is up to date.
+Compiling vhdl file "I:/I2C_master/ipcore_dir/ILA_core.vhd" in Library work.
+Architecture ila_core_a of Entity ila_core is up to date.
+Compiling vhdl file "I:/I2C_master/ipcore_dir/ILA_CONTROL.vhd" in Library work.
+Architecture ila_control_a of Entity ila_control is up to date.
+Compiling vhdl file "I:/I2C_master/TS_driverTOP.vhd" in Library work.
+Entity <ts_drivertop> compiled.
+Entity <ts_drivertop> (Architecture <structural>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <TS_driverTOP> in library <work> (architecture <structural>).
+
+Analyzing hierarchy for entity <TS_CTRL> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <i2c_master> in library <work> (architecture <logic>) with generics.
+	bus_clk = 100000
+	input_clk = 40000000
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <TS_driverTOP> in library <work> (Architecture <structural>).
+INFO:Xst:1739 - HDL ADVISOR - "I:/I2C_master/TS_driverTOP.vhd" line 42: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
+INFO:Xst:1739 - HDL ADVISOR - "I:/I2C_master/TS_driverTOP.vhd" line 51: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
+INFO:Xst:1739 - HDL ADVISOR - "I:/I2C_master/TS_driverTOP.vhd" line 54: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
+WARNING:Xst:2211 - "I:/I2C_master/TS_driverTOP.vhd" line 148: Instantiating black box module <ILA_core>.
+WARNING:Xst:2211 - "I:/I2C_master/TS_driverTOP.vhd" line 165: Instantiating black box module <ILA_CONTROL>.
+Entity <TS_driverTOP> analyzed. Unit <TS_driverTOP> generated.
+
+Analyzing Entity <TS_CTRL> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "I:/I2C_master/TS_ctrl.vhd" line 55: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <reset>
+WARNING:Xst:819 - "I:/I2C_master/TS_ctrl.vhd" line 88: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <MSB>
+Entity <TS_CTRL> analyzed. Unit <TS_CTRL> generated.
+
+Analyzing generic Entity <i2c_master> in library <work> (Architecture <logic>).
+	bus_clk = 100000
+	input_clk = 40000000
+WARNING:Xst:819 - "I:/I2C_master/i2c_master.vhd" line 77: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <data_clk>
+Entity <i2c_master> analyzed. Unit <i2c_master> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <TS_CTRL>.
+    Related source file is "I:/I2C_master/TS_ctrl.vhd".
+WARNING:Xst:647 - Input <ack_error> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <mstr_ena>.
+    Found 1-bit register for signal <rw>.
+    Found 8-bit register for signal <data_wr>.
+    Found 8-bit register for signal <LSB>.
+    Found 8-bit register for signal <MSB>.
+    Found 1-bit 4-to-1 multiplexer for signal <mstr_ena$mux0001> created at line 62.
+    Found 1-bit 4-to-1 multiplexer for signal <rw$mux0000> created at line 62.
+    Summary:
+	inferred  26 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <TS_CTRL> synthesized.
+
+
+Synthesizing Unit <i2c_master>.
+    Related source file is "I:/I2C_master/i2c_master.vhd".
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 9                                              |
+    | Transitions        | 18                                             |
+    | Inputs             | 4                                              |
+    | Outputs            | 10                                             |
+    | Clock              | clk                       (rising_edge)        |
+    | Clock enable       | state$and0000             (positive)           |
+    | Reset              | reset_n                   (negative)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | ready                                          |
+    | Power Up State     | ready                                          |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <busy>.
+    Found 1-bit register for signal <ack_error>.
+    Found 8-bit register for signal <data_rd>.
+    Found 2-bit register for signal <state_out>.
+    Found 1-bit tristate buffer for signal <sda>.
+    Found 1-bit tristate buffer for signal <scl>.
+    Found 8-bit register for signal <addr_rw>.
+    Found 3-bit register for signal <bit_cnt>.
+    Found 3-bit subtractor for signal <bit_cnt$addsub0000>.
+    Found 9-bit register for signal <count>.
+    Found 9-bit adder for signal <count$addsub0000> created at line 89.
+    Found 1-bit register for signal <data_clk>.
+    Found 9-bit comparator greatequal for signal <data_clk$cmp_ge0000>.
+    Found 9-bit comparator lessequal for signal <data_clk$cmp_le0000>.
+    Found 1-bit register for signal <data_clk_prev>.
+    Found 8-bit register for signal <data_rx>.
+    Found 8-bit register for signal <data_tx>.
+    Found 1-bit register for signal <scl_clk>.
+    Found 9-bit comparator lessequal for signal <scl_clk$cmp_le0000>.
+    Found 1-bit register for signal <scl_ena>.
+    Found 1-bit register for signal <sda_int>.
+    Found 8-bit comparator equal for signal <state$cmp_eq0001> created at line 196.
+    Found 2-bit adder for signal <state_out$addsub0000> created at line 176.
+    Found 1-bit register for signal <stretch>.
+    Found 9-bit comparator greatequal for signal <stretch$cmp_ge0000>.
+    Found 9-bit comparator lessequal for signal <stretch$cmp_le0000>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  54 D-type flip-flop(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred   6 Comparator(s).
+	inferred   2 Tristate(s).
+Unit <i2c_master> synthesized.
+
+
+Synthesizing Unit <TS_driverTOP>.
+    Related source file is "I:/I2C_master/TS_driverTOP.vhd".
+WARNING:Xst:653 - Signal <pointer_w> is used but never assigned. This sourceless signal will be automatically connected to value 00000101.
+WARNING:Xst:653 - Signal <addr_w> is used but never assigned. This sourceless signal will be automatically connected to value 0011000.
+Unit <TS_driverTOP> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 3
+ 2-bit adder                                           : 1
+ 3-bit subtractor                                      : 1
+ 9-bit adder                                           : 1
+# Registers                                            : 27
+ 1-bit register                                        : 18
+ 2-bit register                                        : 1
+ 3-bit register                                        : 1
+ 8-bit register                                        : 6
+ 9-bit register                                        : 1
+# Comparators                                          : 6
+ 8-bit comparator equal                                : 1
+ 9-bit comparator greatequal                           : 2
+ 9-bit comparator lessequal                            : 3
+# Multiplexers                                         : 2
+ 1-bit 4-to-1 multiplexer                              : 2
+# Tristates                                            : 2
+ 1-bit tristate buffer                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <MASTER/state/FSM> on signal <state[1:9]> with one-hot encoding.
+-----------------------
+ State    | Encoding
+-----------------------
+ ready    | 000000001
+ start    | 000000010
+ command  | 000000100
+ slv_ack1 | 000001000
+ wr       | 000010000
+ rd       | 000100000
+ slv_ack2 | 001000000
+ mstr_ack | 010000000
+ stop     | 100000000
+-----------------------
+Reading core <ipcore_dir/ILA_core.ngc>.
+Reading core <ipcore_dir/ILA_CONTROL.ngc>.
+Loading core <ILA_core> for timing and area information for instance <chipscope_triggerList>.
+Loading core <ILA_CONTROL> for timing and area information for instance <ILA_controller>.
+WARNING:Xst:1710 - FF/Latch <data_wr_0> (without init value) has a constant value of 1 in block <COMMANDER>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_wr_1> (without init value) has a constant value of 0 in block <COMMANDER>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_wr_2> (without init value) has a constant value of 1 in block <COMMANDER>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_wr_3> (without init value) has a constant value of 0 in block <COMMANDER>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_wr_4> (without init value) has a constant value of 0 in block <COMMANDER>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_wr_5> (without init value) has a constant value of 0 in block <COMMANDER>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_wr_6> (without init value) has a constant value of 0 in block <COMMANDER>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_wr_7> (without init value) has a constant value of 0 in block <COMMANDER>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# Adders/Subtractors                                   : 3
+ 2-bit adder                                           : 1
+ 3-bit subtractor                                      : 1
+ 9-bit adder                                           : 1
+# Registers                                            : 80
+ Flip-Flops                                            : 80
+# Comparators                                          : 6
+ 8-bit comparator equal                                : 1
+ 9-bit comparator greatequal                           : 2
+ 9-bit comparator lessequal                            : 3
+# Multiplexers                                         : 2
+ 1-bit 4-to-1 multiplexer                              : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <data_wr_1> in Unit <TS_CTRL> is equivalent to the following 5 FFs/Latches, which will be removed : <data_wr_3> <data_wr_4> <data_wr_5> <data_wr_6> <data_wr_7> 
+INFO:Xst:2261 - The FF/Latch <data_wr_0> in Unit <TS_CTRL> is equivalent to the following FF/Latch, which will be removed : <data_wr_2> 
+WARNING:Xst:1710 - FF/Latch <data_wr_0> (without init value) has a constant value of 1 in block <TS_CTRL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_wr_1> (without init value) has a constant value of 0 in block <TS_CTRL>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:1901 - Instance U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i in unit U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i of type RAMB16_S1_S36 has been replaced by RAMB16
+
+Optimizing unit <TS_driverTOP> ...
+WARNING:Xst:1710 - FF/Latch <MASTER/addr_rw_7> (without init value) has a constant value of 0 in block <TS_driverTOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MASTER/addr_rw_6> (without init value) has a constant value of 0 in block <TS_driverTOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MASTER/addr_rw_3> (without init value) has a constant value of 0 in block <TS_driverTOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MASTER/addr_rw_2> (without init value) has a constant value of 0 in block <TS_driverTOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MASTER/addr_rw_1> (without init value) has a constant value of 0 in block <TS_driverTOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <MASTER/addr_rw_7> (without init value) has a constant value of 0 in block <TS_driverTOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MASTER/addr_rw_6> (without init value) has a constant value of 0 in block <TS_driverTOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MASTER/addr_rw_3> (without init value) has a constant value of 0 in block <TS_driverTOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MASTER/addr_rw_2> (without init value) has a constant value of 0 in block <TS_driverTOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MASTER/addr_rw_1> (without init value) has a constant value of 0 in block <TS_driverTOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <MASTER/addr_rw_7> (without init value) has a constant value of 0 in block <TS_driverTOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MASTER/addr_rw_6> (without init value) has a constant value of 0 in block <TS_driverTOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MASTER/addr_rw_3> (without init value) has a constant value of 0 in block <TS_driverTOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MASTER/addr_rw_2> (without init value) has a constant value of 0 in block <TS_driverTOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MASTER/addr_rw_1> (without init value) has a constant value of 0 in block <TS_driverTOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <MASTER/addr_rw_7> (without init value) has a constant value of 0 in block <TS_driverTOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MASTER/addr_rw_6> (without init value) has a constant value of 0 in block <TS_driverTOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MASTER/addr_rw_3> (without init value) has a constant value of 0 in block <TS_driverTOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MASTER/addr_rw_2> (without init value) has a constant value of 0 in block <TS_driverTOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MASTER/addr_rw_1> (without init value) has a constant value of 0 in block <TS_driverTOP>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <TS_CTRL> ...
+WARNING:Xst:1710 - FF/Latch <MASTER/data_tx_7> (without init value) has a constant value of 0 in block <TS_driverTOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MASTER/data_tx_6> (without init value) has a constant value of 0 in block <TS_driverTOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MASTER/data_tx_5> (without init value) has a constant value of 0 in block <TS_driverTOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MASTER/data_tx_4> (without init value) has a constant value of 0 in block <TS_driverTOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MASTER/data_tx_3> (without init value) has a constant value of 0 in block <TS_driverTOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MASTER/data_tx_1> (without init value) has a constant value of 0 in block <TS_driverTOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <MASTER/ack_error> of sequential type is unconnected in block <TS_driverTOP>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block TS_driverTOP, actual ratio is 8.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 69
+ Flip-Flops                                            : 69
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : TS_driverTOP.ngr
+Top Level Output File Name         : TS_driverTOP
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 25
+
+Cell Usage :
+# BELS                             : 505
+#      GND                         : 4
+#      INV                         : 8
+#      LUT1                        : 49
+#      LUT2                        : 54
+#      LUT2_D                      : 1
+#      LUT2_L                      : 1
+#      LUT3                        : 62
+#      LUT3_D                      : 2
+#      LUT3_L                      : 4
+#      LUT4                        : 155
+#      LUT4_D                      : 2
+#      LUT4_L                      : 11
+#      MUXCY_L                     : 58
+#      MUXF5                       : 33
+#      MUXF6                       : 9
+#      VCC                         : 2
+#      XORCY                       : 50
+# FlipFlops/Latches                : 296
+#      FD                          : 11
+#      FDC                         : 11
+#      FDCE                        : 58
+#      FDE                         : 51
+#      FDP                         : 12
+#      FDPE                        : 31
+#      FDR                         : 42
+#      FDRE                        : 63
+#      FDRS                        : 4
+#      FDS                         : 12
+#      LDC                         : 1
+# RAMS                             : 1
+#      RAMB16                      : 1
+# Shift Registers                  : 68
+#      SRL16                       : 11
+#      SRL16E                      : 1
+#      SRLC16E                     : 56
+# Clock Buffers                    : 2
+#      BUFG                        : 2
+# IO Buffers                       : 25
+#      IBUF                        : 4
+#      IOBUF                       : 2
+#      OBUF                        : 19
+# Others                           : 1
+#      BSCAN_SPARTAN3              : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s400pq208-4 
+
+ Number of Slices:                      306  out of   3584     8%  
+ Number of Slice Flip Flops:            296  out of   7168     4%  
+ Number of 4 input LUTs:                417  out of   7168     5%  
+    Number used as logic:               349
+    Number used as Shift registers:      68
+ Number of IOs:                          25
+ Number of bonded IOBs:                  25  out of    141    17%  
+ Number of BRAMs:                         1  out of     16     6%  
+ Number of GCLKs:                         2  out of      8    25%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+------------------------------------------------------------------------------------------+------------------------------------------------------------------+-------+
+Clock Signal                                                                              | Clock buffer(FF name)                                            | Load  |
+------------------------------------------------------------------------------------------+------------------------------------------------------------------+-------+
+CLK                                                                                       | IBUF+BUFG                                                        | 212   |
+ILA_controller/U0/U_ICON/I_YES_BSCAN.U_BS/DRCK1                                           | BUFG                                                             | 134   |
+ILA_controller/CONTROL0<13>(ILA_controller/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[9].U_LCE:O)| NONE(*)(chipscope_triggerList/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC)| 1     |
+ILA_controller/U0/iUPDATE_OUT                                                             | NONE(ILA_controller/U0/U_ICON/U_iDATA_CMD)                       | 1     |
+MASTER/data_clk                                                                           | NONE(COMMANDER/rw)                                               | 18    |
+------------------------------------------------------------------------------------------+------------------------------------------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+-------+
+Control Signal                                                                                                                       | Buffer(FF name)                                                                                                                   | Load  |
+-------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+-------+
+COMMANDER/reset_inv(MASTER/reset_n_inv1_INV_0:O)                                                                                     | NONE(COMMANDER/LSB_0)                                                                                                             | 50    |
+ILA_controller/CONTROL0<21>(ILA_controller/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[1].U_HCE:O)                                           | NONE(chipscope_triggerList/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/U_MU/I_MUT_GANDX.U_match/I_SRL16.U_GANDX_SRL16/F_TW[0].U_TREG)| 16    |
+chipscope_triggerList/N0(chipscope_triggerList/XST_GND:G)                                                                            | NONE(chipscope_triggerList/U0/I_NO_D.U_ILA/U_RST/U_POR)                                                                           | 12    |
+ILA_controller/U0/U_ICON/U_CMD/iSEL_n(ILA_controller/U0/U_ICON/U_CMD/U_SEL_n:O)                                                      | NONE(ILA_controller/U0/U_ICON/U_CMD/G_TARGET[10].I_NE0.U_TARGET)                                                                  | 10    |
+ILA_controller/CONTROL0<20>(ILA_controller/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[0].U_HCE:O)                                           | NONE(chipscope_triggerList/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_SRL16.U_GANDX_SRL16/F_TW[0].U_TREG)| 6     |
+chipscope_triggerList/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/iCLR(chipscope_triggerList/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/U_CLEAR:O)        | NONE(chipscope_triggerList/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/U_DOUT0)                                                              | 4     |
+chipscope_triggerList/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/iCLR(chipscope_triggerList/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/U_CLEAR:O)      | NONE(chipscope_triggerList/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/U_DOUT0)                                                             | 4     |
+chipscope_triggerList/U0/I_NO_D.U_ILA/U_STAT/U_DSL1/iCLR(chipscope_triggerList/U0/I_NO_D.U_ILA/U_STAT/U_DSL1/U_CLEAR:O)              | NONE(chipscope_triggerList/U0/I_NO_D.U_ILA/U_STAT/U_DSL1/U_DOUT0)                                                                 | 4     |
+chipscope_triggerList/U0/I_NO_D.U_ILA/iARM(chipscope_triggerList/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/U_GEN_DELAY[3].U_FD:Q)             | NONE(chipscope_triggerList/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_FDCE)                                                                   | 2     |
+chipscope_triggerList/U0/I_NO_D.U_ILA/iRESET<1>(chipscope_triggerList/U0/I_NO_D.U_ILA/U_RST/G_RST[1].U_RST:Q)                        | NONE(chipscope_triggerList/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_OREG.I_YES_OREG.U_OREG)                                | 2     |
+ILA_controller/CONTROL0<13>(ILA_controller/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[9].U_LCE:O)                                           | NONE(chipscope_triggerList/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_FDPE)                                                                   | 1     |
+ILA_controller/U0/U_ICON/iSEL_n(ILA_controller/U0/U_ICON/U_iSEL_n:O)                                                                 | NONE(ILA_controller/U0/U_ICON/U_iDATA_CMD)                                                                                        | 1     |
+chipscope_triggerList/U0/I_NO_D.U_ILA/U_STAT/ACTRESET_pulse(chipscope_triggerList/U0/I_NO_D.U_ILA/U_STAT/U_RESET_EDGE/I_H2L.U_DOUT:Q)| NONE(chipscope_triggerList/U0/I_NO_D.U_ILA/U_STAT/U_RISING)                                                                       | 1     |
+-------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 10.811ns (Maximum Frequency: 92.498MHz)
+   Minimum input arrival time before clock: 9.675ns
+   Maximum output required time after clock: 9.381ns
+   Maximum combinational path delay: 10.029ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 7.775ns (frequency: 128.617MHz)
+  Total number of paths / destination ports: 1042 / 341
+-------------------------------------------------------------------------
+Delay:               7.775ns (Levels of Logic = 4)
+  Source:            MASTER/bit_cnt_2 (FF)
+  Destination:       MASTER/sda_int (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: MASTER/bit_cnt_2 to MASTER/sda_int
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDPE:C->Q            24   0.720   2.136  MASTER/bit_cnt_2 (MASTER/bit_cnt_2)
+     LUT4:I0->O            3   0.551   1.246  MASTER/sda_int_mux000191 (MASTER/state_FSM_FFd2-In)
+     LUT4_L:I0->LO         1   0.551   0.126  MASTER/sda_int_mux00017 (MASTER/sda_int_mux00017)
+     LUT4:I3->O            1   0.551   1.140  MASTER/sda_int_mux000125 (MASTER/sda_int_mux000125)
+     LUT3:I0->O            1   0.551   0.000  MASTER/sda_int_mux0001169 (MASTER/sda_int_mux0001)
+     FDPE:D                    0.203          MASTER/sda_int
+    ----------------------------------------
+    Total                      7.775ns (3.127ns logic, 4.648ns route)
+                                       (40.2% logic, 59.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ILA_controller/U0/U_ICON/I_YES_BSCAN.U_BS/DRCK1'
+  Clock period: 10.811ns (frequency: 92.498MHz)
+  Total number of paths / destination ports: 2086 / 268
+-------------------------------------------------------------------------
+Delay:               10.811ns (Levels of Logic = 5)
+  Source:            ILA_controller/U0/U_ICON/U_CMD/G_TARGET[12].I_NE0.U_TARGET (FF)
+  Destination:       chipscope_triggerList/U0/I_NO_D.U_ILA/U_STAT/U_STAT_CNT/G[0].U_FDRE (FF)
+  Source Clock:      ILA_controller/U0/U_ICON/I_YES_BSCAN.U_BS/DRCK1 rising
+  Destination Clock: ILA_controller/U0/U_ICON/I_YES_BSCAN.U_BS/DRCK1 rising
+
+  Data Path: ILA_controller/U0/U_ICON/U_CMD/G_TARGET[12].I_NE0.U_TARGET to chipscope_triggerList/U0/I_NO_D.U_ILA/U_STAT/U_STAT_CNT/G[0].U_FDRE
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            19   0.720   1.789  U0/U_ICON/U_CMD/G_TARGET[12].I_NE0.U_TARGET (U0/U_ICON/iCORE_ID<0>)
+     LUT4:I0->O           32   0.551   1.921  U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[0].U_LUT (U0/U_ICON/iCORE_ID_SEL<0>)
+     LUT4:I2->O            2   0.551   1.216  U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[0].U_LCE (CONTROL0<4>)
+     end scope: 'ILA_controller'
+     begin scope: 'chipscope_triggerList'
+     LUT2:I0->O            1   0.551   0.801  U0/I_NO_D.U_ILA/U_STAT/U_STATCMD (U0/I_NO_D.U_ILA/U_STAT/iSTATCMD_CE)
+     INV:I->O             10   0.551   1.134  U0/I_NO_D.U_ILA/U_STAT/U_STATCMD_n (U0/I_NO_D.U_ILA/U_STAT/iSTATCMD_CE_n)
+     FDRE:R                    1.026          U0/I_NO_D.U_ILA/U_STAT/U_STAT_CNT/G[9].U_FDRE
+    ----------------------------------------
+    Total                     10.811ns (3.950ns logic, 6.861ns route)
+                                       (36.5% logic, 63.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ILA_controller/U0/iUPDATE_OUT'
+  Clock period: 3.182ns (frequency: 314.268MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               3.182ns (Levels of Logic = 1)
+  Source:            ILA_controller/U0/U_ICON/U_iDATA_CMD (FF)
+  Destination:       ILA_controller/U0/U_ICON/U_iDATA_CMD (FF)
+  Source Clock:      ILA_controller/U0/iUPDATE_OUT rising
+  Destination Clock: ILA_controller/U0/iUPDATE_OUT rising
+
+  Data Path: ILA_controller/U0/U_ICON/U_iDATA_CMD to ILA_controller/U0/U_ICON/U_iDATA_CMD
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.720   0.907  U0/U_ICON/U_iDATA_CMD (U0/U_ICON/iDATA_CMD)
+     INV:I->O              1   0.551   0.801  U0/U_ICON/U_iDATA_CMD_n (U0/U_ICON/iDATA_CMD_n)
+     FDC:D                     0.203          U0/U_ICON/U_iDATA_CMD
+    ----------------------------------------
+    Total                      3.182ns (1.474ns logic, 1.708ns route)
+                                       (46.3% logic, 53.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'MASTER/data_clk'
+  Clock period: 2.856ns (frequency: 350.140MHz)
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Delay:               2.856ns (Levels of Logic = 1)
+  Source:            COMMANDER/mstr_ena (FF)
+  Destination:       COMMANDER/mstr_ena (FF)
+  Source Clock:      MASTER/data_clk rising
+  Destination Clock: MASTER/data_clk rising
+
+  Data Path: COMMANDER/mstr_ena to COMMANDER/mstr_ena
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             14   0.720   1.382  COMMANDER/mstr_ena (COMMANDER/mstr_ena)
+     LUT4:I1->O            1   0.551   0.000  COMMANDER/Mmux_mstr_ena_mux000121 (COMMANDER/mstr_ena_mux0001)
+     FDC:D                     0.203          COMMANDER/mstr_ena
+    ----------------------------------------
+    Total                      2.856ns (1.474ns logic, 1.382ns route)
+                                       (51.6% logic, 48.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'ILA_controller/U0/U_ICON/I_YES_BSCAN.U_BS/DRCK1'
+  Total number of paths / destination ports: 162 / 152
+-------------------------------------------------------------------------
+Offset:              9.675ns (Levels of Logic = 5)
+  Source:            ILA_controller/U0/U_ICON/I_YES_BSCAN.U_BS/I_SPARTAN3.ISYN.I_USE_SOFTBSCAN_EQ0.I_3.U_BS:SHIFT (PAD)
+  Destination:       chipscope_triggerList/U0/I_NO_D.U_ILA/U_STAT/U_STAT_CNT/G[0].U_FDRE (FF)
+  Destination Clock: ILA_controller/U0/U_ICON/I_YES_BSCAN.U_BS/DRCK1 rising
+
+  Data Path: ILA_controller/U0/U_ICON/I_YES_BSCAN.U_BS/I_SPARTAN3.ISYN.I_USE_SOFTBSCAN_EQ0.I_3.U_BS:SHIFT to chipscope_triggerList/U0/I_NO_D.U_ILA/U_STAT/U_STAT_CNT/G[0].U_FDRE
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    BSCAN_SPARTAN3:SHIFT    3   0.000   1.102  U0/U_ICON/I_YES_BSCAN.U_BS/I_SPARTAN3.ISYN.I_USE_SOFTBSCAN_EQ0.I_3.U_BS (U0/iSHIFT_OUT)
+     LUT2:I1->O           32   0.551   2.192  U0/U_ICON/U_CTRL_OUT/U_DATA_VALID (U0/U_ICON/U_CTRL_OUT/iDATA_VALID)
+     LUT4:I0->O            2   0.551   1.216  U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[0].U_LCE (CONTROL0<4>)
+     end scope: 'ILA_controller'
+     begin scope: 'chipscope_triggerList'
+     LUT2:I0->O            1   0.551   0.801  U0/I_NO_D.U_ILA/U_STAT/U_STATCMD (U0/I_NO_D.U_ILA/U_STAT/iSTATCMD_CE)
+     INV:I->O             10   0.551   1.134  U0/I_NO_D.U_ILA/U_STAT/U_STATCMD_n (U0/I_NO_D.U_ILA/U_STAT/iSTATCMD_CE_n)
+     FDRE:R                    1.026          U0/I_NO_D.U_ILA/U_STAT/U_STAT_CNT/G[9].U_FDRE
+    ----------------------------------------
+    Total                      9.675ns (3.230ns logic, 6.445ns route)
+                                       (33.4% logic, 66.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 35 / 35
+-------------------------------------------------------------------------
+Offset:              6.884ns (Levels of Logic = 3)
+  Source:            RESET (PAD)
+  Destination:       MASTER/data_rx_6 (FF)
+  Destination Clock: CLK rising
+
+  Data Path: RESET to MASTER/data_rx_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            24   0.821   2.136  RESET_IBUF (RESET_IBUF)
+     LUT4:I0->O            8   0.551   1.422  MASTER/data_rx_0_and000011 (N29)
+     LUT4:I0->O            1   0.551   0.801  MASTER/data_rx_5_and00001 (MASTER/data_rx_5_and0000)
+     FDE:CE                    0.602          MASTER/data_rx_5
+    ----------------------------------------
+    Total                      6.884ns (2.525ns logic, 4.359ns route)
+                                       (36.7% logic, 63.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'MASTER/data_clk'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              3.220ns (Levels of Logic = 1)
+  Source:            RESET (PAD)
+  Destination:       COMMANDER/rw (FF)
+  Destination Clock: MASTER/data_clk rising
+
+  Data Path: RESET to COMMANDER/rw
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            24   0.821   1.797  RESET_IBUF (RESET_IBUF)
+     FDE:CE                    0.602          COMMANDER/rw
+    ----------------------------------------
+    Total                      3.220ns (1.423ns logic, 1.797ns route)
+                                       (44.2% logic, 55.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 7 / 3
+-------------------------------------------------------------------------
+Offset:              9.381ns (Levels of Logic = 2)
+  Source:            MASTER/state_FSM_FFd8 (FF)
+  Destination:       SDA (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: MASTER/state_FSM_FFd8 to SDA
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             8   0.720   1.422  MASTER/state_FSM_FFd8 (MASTER/state_FSM_FFd8)
+     LUT4:I0->O            1   0.551   0.801  MASTER/sda_ena_n1 (MASTER/sda_ena_n)
+     IOBUF:T->IO               5.887          SDA_IOBUF (SDA)
+    ----------------------------------------
+    Total                      9.381ns (7.158ns logic, 2.223ns route)
+                                       (76.3% logic, 23.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'MASTER/data_clk'
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Offset:              8.788ns (Levels of Logic = 2)
+  Source:            COMMANDER/MSB_7 (FF)
+  Destination:       TEMPERATURE<15> (PAD)
+  Source Clock:      MASTER/data_clk rising
+
+  Data Path: COMMANDER/MSB_7 to TEMPERATURE<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             1   0.720   0.996  COMMANDER/MSB_7 (COMMANDER/MSB_7)
+     LUT2:I1->O            2   0.551   0.877  COMMANDER/Temperature<15>1 (TEMPERATURE_15_OBUF)
+     OBUF:I->O                 5.644          TEMPERATURE_15_OBUF (TEMPERATURE<15>)
+    ----------------------------------------
+    Total                      8.788ns (6.915ns logic, 1.873ns route)
+                                       (78.7% logic, 21.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'ILA_controller/U0/U_ICON/I_YES_BSCAN.U_BS/DRCK1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.720ns (Levels of Logic = 0)
+  Source:            ILA_controller/U0/U_ICON/U_TDO_reg (FF)
+  Destination:       ILA_controller/U0/U_ICON/I_YES_BSCAN.U_BS/I_SPARTAN3.ISYN.I_USE_SOFTBSCAN_EQ0.I_3.U_BS:TDO1 (PAD)
+  Source Clock:      ILA_controller/U0/U_ICON/I_YES_BSCAN.U_BS/DRCK1 rising
+
+  Data Path: ILA_controller/U0/U_ICON/U_TDO_reg to ILA_controller/U0/U_ICON/I_YES_BSCAN.U_BS/I_SPARTAN3.ISYN.I_USE_SOFTBSCAN_EQ0.I_3.U_BS:TDO1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              0   0.720   0.000  U0/U_ICON/U_TDO_reg (U0/U_ICON/iTDO)
+    BSCAN_SPARTAN3:TDO1        0.000          U0/U_ICON/I_YES_BSCAN.U_BS/I_SPARTAN3.ISYN.I_USE_SOFTBSCAN_EQ0.I_3.U_BS
+    ----------------------------------------
+    Total                      0.720ns (0.720ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 19 / 18
+-------------------------------------------------------------------------
+Delay:               10.029ns (Levels of Logic = 3)
+  Source:            RESET (PAD)
+  Destination:       TEMPERATURE<15> (PAD)
+
+  Data Path: RESET to TEMPERATURE<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            24   0.821   2.136  RESET_IBUF (RESET_IBUF)
+     LUT2:I0->O            2   0.551   0.877  COMMANDER/Temperature<15>1 (TEMPERATURE_15_OBUF)
+     OBUF:I->O                 5.644          TEMPERATURE_15_OBUF (TEMPERATURE<15>)
+    ----------------------------------------
+    Total                     10.029ns (7.016ns logic, 3.013ns route)
+                                       (70.0% logic, 30.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 37.00 secs
+Total CPU time to Xst completion: 36.93 secs
+ 
+--> 
+
+Total memory usage is 303396 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   48 (   0 filtered)
+Number of infos    :    8 (   0 filtered)
+

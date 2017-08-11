@@ -1,0 +1,32 @@
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -o "I:/I2C_master/TS_driverTOPtb_isim_beh.exe" -prj "I:/I2C_master/TS_driverTOPtb_beh.prj" "work.TS_driverTOPtb" 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "I:/I2C_master/ipcore_dir/ILA_CONTROL.vhd" into library work
+Parsing VHDL file "I:/I2C_master/TS_ctrl.vhd" into library work
+Parsing VHDL file "I:/I2C_master/ipcore_dir/ILA_core.vhd" into library work
+Parsing VHDL file "I:/I2C_master/i2c_master.vhd" into library work
+WARNING:HDLCompiler:957 - "I:/I2C_master/i2c_master.vhd" Line 93: Case choice must be a locally static expression
+WARNING:HDLCompiler:957 - "I:/I2C_master/i2c_master.vhd" Line 96: Case choice must be a locally static expression
+WARNING:HDLCompiler:957 - "I:/I2C_master/i2c_master.vhd" Line 99: Case choice must be a locally static expression
+Parsing VHDL file "I:/I2C_master/TS_driverTOP.vhd" into library work
+Parsing VHDL file "I:/I2C_master/TS_driverTOPtb.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling architecture behavioral of entity TS_ctrl [ts_ctrl_default]
+Compiling architecture logic of entity i2c_master [\i2c_master(40000000,100000)\]
+Compiling architecture ila_core_a of entity ILA_core [ila_core_default]
+Compiling architecture ila_control_a of entity ILA_CONTROL [ila_control_default]
+Compiling architecture structural of entity TS_driverTOP [ts_drivertop_default]
+Compiling architecture behavior of entity ts_drivertoptb
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 15 VHDL Units
+Built simulation executable I:/I2C_master/TS_driverTOPtb_isim_beh.exe
+Fuse Memory Usage: 33424 KB
+Fuse CPU Usage: 732 ms

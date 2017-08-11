@@ -1,0 +1,38 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to I:/I2C_master/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.18 secs
+ 
+--> Parameter xsthdpdir set to I:/I2C_master/xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.18 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "I:/I2C_master/i2c_master.vhd" in Library work.
+Entity <i2c_master> compiled.
+WARNING:HDLParsers:817 - "I:/I2C_master/i2c_master.vhd" Line 90. Choice .TO. is not a locally static expression.
+WARNING:HDLParsers:817 - "I:/I2C_master/i2c_master.vhd" Line 93. Choice .TO. is not a locally static expression.
+WARNING:HDLParsers:817 - "I:/I2C_master/i2c_master.vhd" Line 96. Choice .TO. is not a locally static expression.
+Entity <i2c_master> (Architecture <logic>) compiled.
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.78 secs
+ 
+--> 
+
+Total memory usage is 212408 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    4 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

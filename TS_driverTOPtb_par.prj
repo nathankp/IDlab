@@ -1,0 +1,2 @@
+vhdl work "netgen/par/TS_driverTOP_timesim.vhd"
+vhdl work "TS_driverTOPtb.vhd"

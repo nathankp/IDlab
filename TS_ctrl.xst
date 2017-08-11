@@ -1,0 +1,5 @@
+set -tmpdir "I:/I2C_master/xst/projnav.tmp"
+set -xsthdpdir "I:/I2C_master/xst"
+elaborate
+-ifn TS_ctrl.prj
+-ifmt mixed

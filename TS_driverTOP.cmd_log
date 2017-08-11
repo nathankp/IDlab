@@ -1,0 +1,227 @@
+xst -intstyle ise -ifn "I:/I2C_master/TS_driverTOP.xst" -ofn "I:/I2C_master/TS_driverTOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc I:/TS_eval0507/TS_eval0507copy/TOPFILE.ucf -p xc3s400-pq208-4 TS_driverTOP.ngc TS_driverTOP.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc I:/TS_eval0507/TS_eval0507copy/TOPFILE.ucf -p xc3s400-pq208-4 TS_driverTOP.ngc TS_driverTOP.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc I:/TS_eval0507/TS_eval0507copy/TOPFILE.ucf -p xc3s400-pq208-4 TS_driverTOP.ngc TS_driverTOP.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o TS_driverTOP_map.ncd TS_driverTOP.ngd TS_driverTOP.pcf 
+par -w -intstyle ise -ol high -t 1 TS_driverTOP_map.ncd TS_driverTOP.ncd TS_driverTOP.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml TS_driverTOP.twx TS_driverTOP.ncd -o TS_driverTOP.twr TS_driverTOP.pcf 
+bitgen -intstyle ise -f TS_driverTOP.ut TS_driverTOP.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc I:/TS_eval0507/TS_eval0507copy/TOPFILE.ucf -p xc3s400-pq208-4 TS_driverTOP.ngc TS_driverTOP.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o TS_driverTOP_map.ncd TS_driverTOP.ngd TS_driverTOP.pcf 
+par -w -intstyle ise -ol high -t 1 TS_driverTOP_map.ncd TS_driverTOP.ncd TS_driverTOP.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml TS_driverTOP.twx TS_driverTOP.ncd -o TS_driverTOP.twr TS_driverTOP.pcf 
+bitgen -intstyle ise -f TS_driverTOP.ut TS_driverTOP.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc I:/TS_eval0507/TS_eval0507copy/TOPFILE.ucf -p xc3s400-pq208-4 TS_driverTOP.ngc TS_driverTOP.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o TS_driverTOP_map.ncd TS_driverTOP.ngd TS_driverTOP.pcf 
+par -w -intstyle ise -ol high -t 1 TS_driverTOP_map.ncd TS_driverTOP.ncd TS_driverTOP.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml TS_driverTOP.twx TS_driverTOP.ncd -o TS_driverTOP.twr TS_driverTOP.pcf 
+bitgen -intstyle ise -f TS_driverTOP.ut TS_driverTOP.ncd 
+xst -intstyle ise -ifn "I:/I2C_master/TS_driverTOP.xst" -ofn "I:/I2C_master/TS_driverTOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc I:/TS_eval0507/TS_eval0507copy/TOPFILE.ucf -p xc3s400-pq208-4 TS_driverTOP.ngc TS_driverTOP.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o TS_driverTOP_map.ncd TS_driverTOP.ngd TS_driverTOP.pcf 
+par -w -intstyle ise -ol high -t 1 TS_driverTOP_map.ncd TS_driverTOP.ncd TS_driverTOP.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml TS_driverTOP.twx TS_driverTOP.ncd -o TS_driverTOP.twr TS_driverTOP.pcf 
+bitgen -intstyle ise -f TS_driverTOP.ut TS_driverTOP.ncd 
+xst -intstyle ise -ifn "I:/I2C_master/TS_driverTOP.xst" -ofn "I:/I2C_master/TS_driverTOP.syr" 
+xst -intstyle ise -ifn "I:/I2C_master/TS_driverTOP.xst" -ofn "I:/I2C_master/TS_driverTOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc I:/TS_eval0507/TS_eval0507copy/TOPFILE.ucf -p xc3s400-pq208-4 TS_driverTOP.ngc TS_driverTOP.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o TS_driverTOP_map.ncd TS_driverTOP.ngd TS_driverTOP.pcf 
+par -w -intstyle ise -ol high -t 1 TS_driverTOP_map.ncd TS_driverTOP.ncd TS_driverTOP.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml TS_driverTOP.twx TS_driverTOP.ncd -o TS_driverTOP.twr TS_driverTOP.pcf 
+bitgen -intstyle ise -f TS_driverTOP.ut TS_driverTOP.ncd 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc I:/TS_eval0507/TS_eval0507copy/TOPFILE.ucf -p xc3s400-pq208-4 TS_driverTOP.ngc TS_driverTOP.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o TS_driverTOP_map.ncd TS_driverTOP.ngd TS_driverTOP.pcf 
+par -w -intstyle ise -ol high -t 1 TS_driverTOP_map.ncd TS_driverTOP.ncd TS_driverTOP.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml TS_driverTOP.twx TS_driverTOP.ncd -o TS_driverTOP.twr TS_driverTOP.pcf 
+bitgen -intstyle ise -f TS_driverTOP.ut TS_driverTOP.ncd 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc I:/TS_eval0507/TS_eval0507copy/TOPFILE.ucf -p xc3s400-pq208-4 TS_driverTOP.ngc TS_driverTOP.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o TS_driverTOP_map.ncd TS_driverTOP.ngd TS_driverTOP.pcf 
+netgen -intstyle ise -ar Structure -tm TS_driverTOP -w -dir netgen/synthesis -ofmt vhdl -sim TS_driverTOP.ngc TS_driverTOP_synthesis.vhd 
+xst -intstyle ise -ifn "I:/I2C_master/TS_driverTOP.xst" -ofn "I:/I2C_master/TS_driverTOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc I:/TS_eval0507/TS_eval0507copy/TOPFILE.ucf -p xc3s400-pq208-4 TS_driverTOP.ngc TS_driverTOP.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o TS_driverTOP_map.ncd TS_driverTOP.ngd TS_driverTOP.pcf 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc I:/TS_eval0507/TS_eval0507copy/TOPFILE.ucf -p xc3s400-pq208-4 TS_driverTOP.ngc TS_driverTOP.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o TS_driverTOP_map.ncd TS_driverTOP.ngd TS_driverTOP.pcf 
+par -w -intstyle ise -ol high -t 1 TS_driverTOP_map.ncd TS_driverTOP.ncd TS_driverTOP.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml TS_driverTOP.twx TS_driverTOP.ncd -o TS_driverTOP.twr TS_driverTOP.pcf 
+bitgen -intstyle ise -f TS_driverTOP.ut TS_driverTOP.ncd 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc I:/TS_eval0507/TS_eval0507copy/TOPFILE.ucf -p xc3s400-pq208-4 TS_driverTOP.ngc TS_driverTOP.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o TS_driverTOP_map.ncd TS_driverTOP.ngd TS_driverTOP.pcf 
+par -w -intstyle ise -ol high -t 1 TS_driverTOP_map.ncd TS_driverTOP.ncd TS_driverTOP.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml TS_driverTOP.twx TS_driverTOP.ncd -o TS_driverTOP.twr TS_driverTOP.pcf 
+bitgen -intstyle ise -f TS_driverTOP.ut TS_driverTOP.ncd 
+xst -intstyle ise -ifn "I:/I2C_master/TS_driverTOP.xst" -ofn "I:/I2C_master/TS_driverTOP.syr" 
+xst -intstyle ise -ifn "I:/I2C_master/TS_driverTOP.xst" -ofn "I:/I2C_master/TS_driverTOP.syr" 
+xst -intstyle ise -ifn "I:/I2C_master/TS_driverTOP.xst" -ofn "I:/I2C_master/TS_driverTOP.syr" 
+xst -intstyle ise -ifn "I:/I2C_master/TS_driverTOP.xst" -ofn "I:/I2C_master/TS_driverTOP.syr" 
+xst -intstyle ise -ifn "I:/I2C_master/TS_driverTOP.xst" -ofn "I:/I2C_master/TS_driverTOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc I:/TS_eval0507/TS_eval0507copy/TOPFILE.ucf -p xc3s400-pq208-4 TS_driverTOP.ngc TS_driverTOP.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o TS_driverTOP_map.ncd TS_driverTOP.ngd TS_driverTOP.pcf 
+par -w -intstyle ise -ol high -t 1 TS_driverTOP_map.ncd TS_driverTOP.ncd TS_driverTOP.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml TS_driverTOP.twx TS_driverTOP.ncd -o TS_driverTOP.twr TS_driverTOP.pcf 
+bitgen -intstyle ise -f TS_driverTOP.ut TS_driverTOP.ncd 
+xst -intstyle ise -ifn "I:/I2C_master/TS_driverTOP.xst" -ofn "I:/I2C_master/TS_driverTOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc I:/TS_eval0507/TS_eval0507copy/TOPFILE.ucf -p xc3s400-pq208-4 TS_driverTOP.ngc TS_driverTOP.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o TS_driverTOP_map.ncd TS_driverTOP.ngd TS_driverTOP.pcf 
+par -w -intstyle ise -ol high -t 1 TS_driverTOP_map.ncd TS_driverTOP.ncd TS_driverTOP.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml TS_driverTOP.twx TS_driverTOP.ncd -o TS_driverTOP.twr TS_driverTOP.pcf 
+bitgen -intstyle ise -f TS_driverTOP.ut TS_driverTOP.ncd 
+xst -intstyle ise -ifn "I:/I2C_master/TS_driverTOP.xst" -ofn "I:/I2C_master/TS_driverTOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc I:/TS_eval0507/TS_eval0507copy/TOPFILE.ucf -p xc3s400-pq208-4 TS_driverTOP.ngc TS_driverTOP.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o TS_driverTOP_map.ncd TS_driverTOP.ngd TS_driverTOP.pcf 
+par -w -intstyle ise -ol high -t 1 TS_driverTOP_map.ncd TS_driverTOP.ncd TS_driverTOP.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml TS_driverTOP.twx TS_driverTOP.ncd -o TS_driverTOP.twr TS_driverTOP.pcf 
+bitgen -intstyle ise -f TS_driverTOP.ut TS_driverTOP.ncd 
+xst -intstyle ise -ifn "I:/I2C_master/TS_driverTOP.xst" -ofn "I:/I2C_master/TS_driverTOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc I:/TS_eval0507/TS_eval0507copy/TOPFILE.ucf -p xc3s400-pq208-4 TS_driverTOP.ngc TS_driverTOP.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o TS_driverTOP_map.ncd TS_driverTOP.ngd TS_driverTOP.pcf 
+par -w -intstyle ise -ol high -t 1 TS_driverTOP_map.ncd TS_driverTOP.ncd TS_driverTOP.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml TS_driverTOP.twx TS_driverTOP.ncd -o TS_driverTOP.twr TS_driverTOP.pcf 
+bitgen -intstyle ise -f TS_driverTOP.ut TS_driverTOP.ncd 
+xst -intstyle ise -ifn "I:/I2C_master/TS_driverTOP.xst" -ofn "I:/I2C_master/TS_driverTOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc I:/TS_eval0507/TS_eval0507copy/TOPFILE.ucf -p xc3s400-pq208-4 TS_driverTOP.ngc TS_driverTOP.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o TS_driverTOP_map.ncd TS_driverTOP.ngd TS_driverTOP.pcf 
+par -w -intstyle ise -ol high -t 1 TS_driverTOP_map.ncd TS_driverTOP.ncd TS_driverTOP.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml TS_driverTOP.twx TS_driverTOP.ncd -o TS_driverTOP.twr TS_driverTOP.pcf 
+bitgen -intstyle ise -f TS_driverTOP.ut TS_driverTOP.ncd 
+xst -intstyle ise -ifn "I:/I2C_master/TS_driverTOP.xst" -ofn "I:/I2C_master/TS_driverTOP.syr" 
+xst -intstyle ise -ifn "I:/I2C_master/TS_driverTOP.xst" -ofn "I:/I2C_master/TS_driverTOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc I:/TS_eval0507/TS_eval0507copy/TOPFILE.ucf -p xc3s400-pq208-4 TS_driverTOP.ngc TS_driverTOP.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o TS_driverTOP_map.ncd TS_driverTOP.ngd TS_driverTOP.pcf 
+par -w -intstyle ise -ol high -t 1 TS_driverTOP_map.ncd TS_driverTOP.ncd TS_driverTOP.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml TS_driverTOP.twx TS_driverTOP.ncd -o TS_driverTOP.twr TS_driverTOP.pcf 
+bitgen -intstyle ise -f TS_driverTOP.ut TS_driverTOP.ncd 
+xst -intstyle ise -ifn "I:/I2C_master/TS_driverTOP.xst" -ofn "I:/I2C_master/TS_driverTOP.syr" 
+xst -intstyle ise -ifn "I:/I2C_master/TS_driverTOP.xst" -ofn "I:/I2C_master/TS_driverTOP.syr" 
+xst -intstyle ise -ifn "I:/I2C_master/TS_driverTOP.xst" -ofn "I:/I2C_master/TS_driverTOP.syr" 
+xst -intstyle ise -ifn "I:/I2C_master/TS_driverTOP.xst" -ofn "I:/I2C_master/TS_driverTOP.syr" 
+xst -intstyle ise -ifn "I:/I2C_master/TS_driverTOP.xst" -ofn "I:/I2C_master/TS_driverTOP.syr" 
+xst -intstyle ise -ifn "I:/I2C_master/TS_driverTOP.xst" -ofn "I:/I2C_master/TS_driverTOP.syr" 
+xst -intstyle ise -ifn "I:/I2C_master/TS_driverTOP.xst" -ofn "I:/I2C_master/TS_driverTOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc I:/TS_eval0507/TS_eval0507copy/TOPFILE.ucf -p xc3s400-pq208-4 TS_driverTOP.ngc TS_driverTOP.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o TS_driverTOP_map.ncd TS_driverTOP.ngd TS_driverTOP.pcf 
+par -w -intstyle ise -ol high -t 1 TS_driverTOP_map.ncd TS_driverTOP.ncd TS_driverTOP.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml TS_driverTOP.twx TS_driverTOP.ncd -o TS_driverTOP.twr TS_driverTOP.pcf 
+bitgen -intstyle ise -f TS_driverTOP.ut TS_driverTOP.ncd 
+xst -intstyle ise -ifn "I:/I2C_master/TS_driverTOP.xst" -ofn "I:/I2C_master/TS_driverTOP.syr" 
+xst -intstyle ise -ifn "I:/I2C_master/TS_driverTOP.xst" -ofn "I:/I2C_master/TS_driverTOP.syr" 
+xst -intstyle ise -ifn "I:/I2C_master/TS_driverTOP.xst" -ofn "I:/I2C_master/TS_driverTOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc I:/TS_eval0507/TS_eval0507copy/TOPFILE.ucf -p xc3s400-pq208-4 TS_driverTOP.ngc TS_driverTOP.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o TS_driverTOP_map.ncd TS_driverTOP.ngd TS_driverTOP.pcf 
+par -w -intstyle ise -ol high -t 1 TS_driverTOP_map.ncd TS_driverTOP.ncd TS_driverTOP.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml TS_driverTOP.twx TS_driverTOP.ncd -o TS_driverTOP.twr TS_driverTOP.pcf 
+bitgen -intstyle ise -f TS_driverTOP.ut TS_driverTOP.ncd 
+xst -intstyle ise -ifn "I:/I2C_master/TS_driverTOP.xst" -ofn "I:/I2C_master/TS_driverTOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc I:/TS_eval0507/TS_eval0507copy/TOPFILE.ucf -p xc3s400-pq208-4 TS_driverTOP.ngc TS_driverTOP.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o TS_driverTOP_map.ncd TS_driverTOP.ngd TS_driverTOP.pcf 
+par -w -intstyle ise -ol high -t 1 TS_driverTOP_map.ncd TS_driverTOP.ncd TS_driverTOP.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml TS_driverTOP.twx TS_driverTOP.ncd -o TS_driverTOP.twr TS_driverTOP.pcf 
+bitgen -intstyle ise -f TS_driverTOP.ut TS_driverTOP.ncd 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc I:/TS_eval0507/TS_eval0507copy/TOPFILE.ucf -p xc3s400-pq208-4 TS_driverTOP.ngc TS_driverTOP.ngd  
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc I:/TS_eval0507/TS_eval0507copy/TOPFILE.ucf -p xc3s400-pq208-4 TS_driverTOP.ngc TS_driverTOP.ngd  
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc I:/TS_eval0507/TS_eval0507copy/TOPFILE.ucf -p xc3s400-pq208-4 TS_driverTOP.ngc TS_driverTOP.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o TS_driverTOP_map.ncd TS_driverTOP.ngd TS_driverTOP.pcf 
+par -w -intstyle ise -ol high -t 1 TS_driverTOP_map.ncd TS_driverTOP.ncd TS_driverTOP.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml TS_driverTOP.twx TS_driverTOP.ncd -o TS_driverTOP.twr TS_driverTOP.pcf 
+bitgen -intstyle ise -f TS_driverTOP.ut TS_driverTOP.ncd 
+xst -intstyle ise -ifn "I:/I2C_master/TS_driverTOP.xst" -ofn "I:/I2C_master/TS_driverTOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc I:/TS_eval0507/TS_eval0507copy/TOPFILE.ucf -p xc3s400-pq208-4 TS_driverTOP.ngc TS_driverTOP.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o TS_driverTOP_map.ncd TS_driverTOP.ngd TS_driverTOP.pcf 
+par -w -intstyle ise -ol high -t 1 TS_driverTOP_map.ncd TS_driverTOP.ncd TS_driverTOP.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml TS_driverTOP.twx TS_driverTOP.ncd -o TS_driverTOP.twr TS_driverTOP.pcf 
+bitgen -intstyle ise -f TS_driverTOP.ut TS_driverTOP.ncd 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc I:/TS_eval0507/TS_eval0507copy/TOPFILE.ucf -p xc3s400-pq208-4 TS_driverTOP.ngc TS_driverTOP.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o TS_driverTOP_map.ncd TS_driverTOP.ngd TS_driverTOP.pcf 
+par -w -intstyle ise -ol high -t 1 TS_driverTOP_map.ncd TS_driverTOP.ncd TS_driverTOP.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml TS_driverTOP.twx TS_driverTOP.ncd -o TS_driverTOP.twr TS_driverTOP.pcf 
+bitgen -intstyle ise -f TS_driverTOP.ut TS_driverTOP.ncd 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc I:/TS_eval0507/TS_eval0507copy/TOPFILE.ucf -p xc3s400-pq208-4 TS_driverTOP.ngc TS_driverTOP.ngd  
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc I:/TS_eval0507/TS_eval0507copy/TOPFILE.ucf -p xc3s400-pq208-4 TS_driverTOP.ngc TS_driverTOP.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o TS_driverTOP_map.ncd TS_driverTOP.ngd TS_driverTOP.pcf 
+par -w -intstyle ise -ol high -t 1 TS_driverTOP_map.ncd TS_driverTOP.ncd TS_driverTOP.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml TS_driverTOP.twx TS_driverTOP.ncd -o TS_driverTOP.twr TS_driverTOP.pcf 
+bitgen -intstyle ise -f TS_driverTOP.ut TS_driverTOP.ncd 
+xst -intstyle ise -ifn "I:/I2C_master/TS_driverTOP.xst" -ofn "I:/I2C_master/TS_driverTOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc I:/TS_eval0507/TS_eval0507copy/TOPFILE.ucf -p xc3s400-pq208-4 TS_driverTOP.ngc TS_driverTOP.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o TS_driverTOP_map.ncd TS_driverTOP.ngd TS_driverTOP.pcf 
+par -w -intstyle ise -ol high -t 1 TS_driverTOP_map.ncd TS_driverTOP.ncd TS_driverTOP.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml TS_driverTOP.twx TS_driverTOP.ncd -o TS_driverTOP.twr TS_driverTOP.pcf 
+bitgen -intstyle ise -f TS_driverTOP.ut TS_driverTOP.ncd 
+xst -intstyle ise -ifn "I:/I2C_master/TS_driverTOP.xst" -ofn "I:/I2C_master/TS_driverTOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc I:/TS_eval0507/TS_eval0507copy/TOPFILE.ucf -p xc3s400-pq208-4 TS_driverTOP.ngc TS_driverTOP.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o TS_driverTOP_map.ncd TS_driverTOP.ngd TS_driverTOP.pcf 
+par -w -intstyle ise -ol high -t 1 TS_driverTOP_map.ncd TS_driverTOP.ncd TS_driverTOP.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml TS_driverTOP.twx TS_driverTOP.ncd -o TS_driverTOP.twr TS_driverTOP.pcf 
+bitgen -intstyle ise -f TS_driverTOP.ut TS_driverTOP.ncd 
+xst -intstyle ise -ifn "I:/I2C_master/TS_driverTOP.xst" -ofn "I:/I2C_master/TS_driverTOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc I:/TS_eval0507/TS_eval0507copy/TOPFILE.ucf -p xc3s400-pq208-4 TS_driverTOP.ngc TS_driverTOP.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o TS_driverTOP_map.ncd TS_driverTOP.ngd TS_driverTOP.pcf 
+par -w -intstyle ise -ol high -t 1 TS_driverTOP_map.ncd TS_driverTOP.ncd TS_driverTOP.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml TS_driverTOP.twx TS_driverTOP.ncd -o TS_driverTOP.twr TS_driverTOP.pcf 
+bitgen -intstyle ise -f TS_driverTOP.ut TS_driverTOP.ncd 
+xst -intstyle ise -ifn "I:/I2C_master/TS_driverTOP.xst" -ofn "I:/I2C_master/TS_driverTOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc I:/TS_eval0507/TS_eval0507copy/TOPFILE.ucf -p xc3s400-pq208-4 TS_driverTOP.ngc TS_driverTOP.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o TS_driverTOP_map.ncd TS_driverTOP.ngd TS_driverTOP.pcf 
+par -w -intstyle ise -ol high -t 1 TS_driverTOP_map.ncd TS_driverTOP.ncd TS_driverTOP.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml TS_driverTOP.twx TS_driverTOP.ncd -o TS_driverTOP.twr TS_driverTOP.pcf 
+bitgen -intstyle ise -f TS_driverTOP.ut TS_driverTOP.ncd 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc I:/TS_eval0507/TS_eval0507copy/TOPFILE.ucf -p xc3s400-pq208-4 TS_driverTOP.ngc TS_driverTOP.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o TS_driverTOP_map.ncd TS_driverTOP.ngd TS_driverTOP.pcf 
+par -w -intstyle ise -ol high -t 1 TS_driverTOP_map.ncd TS_driverTOP.ncd TS_driverTOP.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml TS_driverTOP.twx TS_driverTOP.ncd -o TS_driverTOP.twr TS_driverTOP.pcf 
+bitgen -intstyle ise -f TS_driverTOP.ut TS_driverTOP.ncd 
+netgen -intstyle ise -tb -ti UUT -ar Structure -tm TS_driverTOP -w -dir netgen/synthesis -ofmt vhdl -sim TS_driverTOP.ngc TS_driverTOP_synthesis.vhd 
+netgen -intstyle ise -tb -ti UUT -rpw 100 -tpw 0 -ar Structure -tm TS_driverTOP -w -dir netgen/translate -ofmt vhdl -sim TS_driverTOP.ngd TS_driverTOP_translate.vhd 
+xst -intstyle ise -ifn "I:/I2C_master/TS_driverTOP.xst" -ofn "I:/I2C_master/TS_driverTOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc I:/TS_eval0507/TS_eval0507copy/TOPFILE.ucf -p xc3s400-pq208-4 TS_driverTOP.ngc TS_driverTOP.ngd  
+netgen -intstyle ise -tb -ti UUT -rpw 100 -tpw 0 -ar Structure -tm TS_driverTOP -w -dir netgen/translate -ofmt vhdl -sim TS_driverTOP.ngd TS_driverTOP_translate.vhd 
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o TS_driverTOP_map.ncd TS_driverTOP.ngd TS_driverTOP.pcf 
+par -w -intstyle ise -ol high -t 1 TS_driverTOP_map.ncd TS_driverTOP.ncd TS_driverTOP.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml TS_driverTOP.twx TS_driverTOP.ncd -o TS_driverTOP.twr TS_driverTOP.pcf 
+netgen -intstyle ise -s 4  -pcf TS_driverTOP.pcf -tb -ti UUT -rpw 100 -tpw 0 -ar Structure -tm TS_driverTOP -insert_pp_buffers true -w -dir netgen/par -ofmt vhdl -sim TS_driverTOP.ncd TS_driverTOP_timesim.vhd 
+xst -intstyle ise -ifn "I:/I2C_master/TS_driverTOP.xst" -ofn "I:/I2C_master/TS_driverTOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc I:/TS_eval0507/TS_eval0507copy/TOPFILE.ucf -p xc3s400-pq208-4 TS_driverTOP.ngc TS_driverTOP.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o TS_driverTOP_map.ncd TS_driverTOP.ngd TS_driverTOP.pcf 
+par -w -intstyle ise -ol high -t 1 TS_driverTOP_map.ncd TS_driverTOP.ncd TS_driverTOP.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml TS_driverTOP.twx TS_driverTOP.ncd -o TS_driverTOP.twr TS_driverTOP.pcf 
+bitgen -intstyle ise -f TS_driverTOP.ut TS_driverTOP.ncd 
+netgen -intstyle ise -tb -ti UUT -ar Structure -tm TS_driverTOP -w -dir netgen/synthesis -ofmt vhdl -sim TS_driverTOP.ngc TS_driverTOP_synthesis.vhd 
+xst -intstyle ise -ifn "I:/I2C_master/TS_driverTOP.xst" -ofn "I:/I2C_master/TS_driverTOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc I:/TS_eval0507/TS_eval0507copy/TOPFILE.ucf -p xc3s400-pq208-4 TS_driverTOP.ngc TS_driverTOP.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o TS_driverTOP_map.ncd TS_driverTOP.ngd TS_driverTOP.pcf 
+par -w -intstyle ise -ol high -t 1 TS_driverTOP_map.ncd TS_driverTOP.ncd TS_driverTOP.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml TS_driverTOP.twx TS_driverTOP.ncd -o TS_driverTOP.twr TS_driverTOP.pcf 
+bitgen -intstyle ise -f TS_driverTOP.ut TS_driverTOP.ncd 
+netgen -intstyle ise -tb -ti UUT -ar Structure -tm TS_driverTOP -w -dir netgen/synthesis -ofmt vhdl -sim TS_driverTOP.ngc TS_driverTOP_synthesis.vhd 
+netgen -intstyle ise -s 4  -pcf TS_driverTOP.pcf -tb -ti UUT -rpw 100 -tpw 0 -ar Structure -tm TS_driverTOP -insert_pp_buffers true -w -dir netgen/par -ofmt vhdl -sim TS_driverTOP.ncd TS_driverTOP_timesim.vhd 
+xst -intstyle ise -ifn "I:/I2C_master/TS_driverTOP.xst" -ofn "I:/I2C_master/TS_driverTOP.syr" 
+xst -intstyle ise -ifn "I:/I2C_master/TS_driverTOP.xst" -ofn "I:/I2C_master/TS_driverTOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc I:/TS_eval0507/TS_eval0507copy/TOPFILE.ucf -p xc3s400-pq208-4 TS_driverTOP.ngc TS_driverTOP.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o TS_driverTOP_map.ncd TS_driverTOP.ngd TS_driverTOP.pcf 
+par -w -intstyle ise -ol high -t 1 TS_driverTOP_map.ncd TS_driverTOP.ncd TS_driverTOP.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml TS_driverTOP.twx TS_driverTOP.ncd -o TS_driverTOP.twr TS_driverTOP.pcf 
+bitgen -intstyle ise -f TS_driverTOP.ut TS_driverTOP.ncd 
+xst -intstyle ise -ifn "I:/I2C_master/TS_driverTOP.xst" -ofn "I:/I2C_master/TS_driverTOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc I:/TS_eval0507/TS_eval0507copy/TOPFILE.ucf -p xc3s400-pq208-4 TS_driverTOP.ngc TS_driverTOP.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o TS_driverTOP_map.ncd TS_driverTOP.ngd TS_driverTOP.pcf 
+par -w -intstyle ise -ol high -t 1 TS_driverTOP_map.ncd TS_driverTOP.ncd TS_driverTOP.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml TS_driverTOP.twx TS_driverTOP.ncd -o TS_driverTOP.twr TS_driverTOP.pcf 
+bitgen -intstyle ise -f TS_driverTOP.ut TS_driverTOP.ncd 
+xst -intstyle ise -ifn "I:/I2C_master/TS_driverTOP.xst" -ofn "I:/I2C_master/TS_driverTOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc I:/TS_eval0507/TS_eval0507copy/TOPFILE.ucf -p xc3s400-pq208-4 TS_driverTOP.ngc TS_driverTOP.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o TS_driverTOP_map.ncd TS_driverTOP.ngd TS_driverTOP.pcf 
+par -w -intstyle ise -ol high -t 1 TS_driverTOP_map.ncd TS_driverTOP.ncd TS_driverTOP.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml TS_driverTOP.twx TS_driverTOP.ncd -o TS_driverTOP.twr TS_driverTOP.pcf 
+bitgen -intstyle ise -f TS_driverTOP.ut TS_driverTOP.ncd 
+xst -intstyle ise -ifn "I:/I2C_master/TS_driverTOP.xst" -ofn "I:/I2C_master/TS_driverTOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc I:/TS_eval0507/TS_eval0507copy/TOPFILE.ucf -p xc3s400-pq208-4 TS_driverTOP.ngc TS_driverTOP.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o TS_driverTOP_map.ncd TS_driverTOP.ngd TS_driverTOP.pcf 
+par -w -intstyle ise -ol high -t 1 TS_driverTOP_map.ncd TS_driverTOP.ncd TS_driverTOP.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml TS_driverTOP.twx TS_driverTOP.ncd -o TS_driverTOP.twr TS_driverTOP.pcf 
+bitgen -intstyle ise -f TS_driverTOP.ut TS_driverTOP.ncd 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc I:/TS_eval0507/TS_eval0507copy/TOPFILE.ucf -p xc3s400-pq208-4 TS_driverTOP.ngc TS_driverTOP.ngd  
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc I:/TS_eval0507/TS_eval0507copy/TOPFILE.ucf -p xc3s400-pq208-4 TS_driverTOP.ngc TS_driverTOP.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o TS_driverTOP_map.ncd TS_driverTOP.ngd TS_driverTOP.pcf 
+par -w -intstyle ise -ol high -t 1 TS_driverTOP_map.ncd TS_driverTOP.ncd TS_driverTOP.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml TS_driverTOP.twx TS_driverTOP.ncd -o TS_driverTOP.twr TS_driverTOP.pcf 
+bitgen -intstyle ise -f TS_driverTOP.ut TS_driverTOP.ncd 
