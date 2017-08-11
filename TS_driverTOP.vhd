@@ -1,6 +1,6 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
+-- Company: University of Hawaii at Manoa Instrumentation Developement Lab
+-- Engineer: Nathan Park
 -- 
 -- Create Date:    12:30:46 07/21/2017 
 -- Design Name: 
@@ -14,7 +14,7 @@
 --
 -- Revision: 
 -- Revision 0.01 - File Created
--- Additional Comments: 
+-- Additional Comments: Driver for the MCP98244 temperature sensor. Can only recieve temperature readout
 --
 ----------------------------------------------------------------------------------
 library IEEE;
@@ -78,7 +78,6 @@ architecture Structural of TS_driverTOP is
 			  state_out : BUFFER	  STD_LOGIC_VECTOR (1 DOWNTO 0); -- (REVISION: ADDED state output to contoller)
 			  busy      : OUT    STD_LOGIC;                    --indicates transaction in progress
 			  data_rd   : OUT    STD_LOGIC_VECTOR(7 DOWNTO 0); --data read from slave
-			 -- sda_reg   : OUT	  STD_LOGIC_VECTOR(7 DOWNTO 0); --temporary, to check if correct bytes are being sent
 			  ack_error : BUFFER STD_LOGIC;                    --flag if improper acknowledge from slave
 			  sda       : INOUT  STD_LOGIC;                    --serial data output of i2c bus
 			  scl       : INOUT  STD_LOGIC                     --serial clock output of i2c bus
@@ -103,7 +102,6 @@ end component;
  signal data_tx : std_logic_vector(7 downto 0);
  signal data_rx : std_logic_vector(7 downto 0);
  signal mstr_ena_w : std_logic;
- --signal reset_mstr_w : std_logic;
  signal rw_w : std_logic;
  signal addr_w : std_logic_vector (6 downto 0):= "0011000";
  signal slow_clk_w : std_logic;
@@ -112,8 +110,7 @@ end component;
  signal ack_error_w : std_logic;
  signal temp_reg  : std_logic_vector(15 downto 0);
  signal ICONTROL : STD_LOGIC_VECTOR(35 DOWNTO 0);
- --signal SDA_regw : std_logic_vector(7 downto 0):= (others => '0');
- --signal reset_w : std_logic; 
+
 begin
  COMMANDER : TS_ctrl port map(
 	   data_clock => slow_clk_w,
@@ -140,7 +137,6 @@ begin
 		busy => BUSY,
 		data_rd => data_rx,
 		ack_error => ack_error_w,
-		--sda_reg => sda_regW,
 		sda => SDA,
 		SCL => SCL);
 		
@@ -169,11 +165,6 @@ begin
 Alarm <= TS_EVENT;
 TEMPERATURE <= temp_reg;
 button <= (not Go) or (not RESET);
---reset_driver: process(CLK)
---begin
---If (CLK'EVENT and CLK = '1') then
---  reset_w <= RESET and(not ack_error_w);        
---end if;
---end process;	
+
 end Structural;
 

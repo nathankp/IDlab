@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="I:/I2C_master/TS_driverTOPtb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="ts_drivertoptb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="16" />
+   <wvobject fp_name="/ts_drivertoptb/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ts_drivertoptb/go" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">go</obj_property>
+      <obj_property name="ObjectShortName">go</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ts_drivertoptb/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ts_drivertoptb/ts_event" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ts_event</obj_property>
+      <obj_property name="ObjectShortName">ts_event</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ts_drivertoptb/scl" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">scl</obj_property>
+      <obj_property name="ObjectShortName">scl</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ts_drivertoptb/sda" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">sda</obj_property>
+      <obj_property name="ObjectShortName">sda</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ts_drivertoptb/temperature" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">temperature[15:0]</obj_property>
+      <obj_property name="ObjectShortName">temperature[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ts_drivertoptb/button" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">button</obj_property>
+      <obj_property name="ObjectShortName">button</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ts_drivertoptb/addr_reg" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">addr_reg[7:0]</obj_property>
+      <obj_property name="ObjectShortName">addr_reg[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ts_drivertoptb/pointer_reg" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pointer_reg[7:0]</obj_property>
+      <obj_property name="ObjectShortName">pointer_reg[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ts_drivertoptb/clk_period" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_period</obj_property>
+      <obj_property name="ObjectShortName">clk_period</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ts_drivertoptb/data_clk_period" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">data_clk_period</obj_property>
+      <obj_property name="ObjectShortName">data_clk_period</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ts_drivertoptb/uut/MASTER/state" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">state</obj_property>
+      <obj_property name="ObjectShortName">state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ts_drivertoptb/uut/MASTER/ena" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ena</obj_property>
+      <obj_property name="ObjectShortName">ena</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ts_drivertoptb/uut/MASTER/state_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">state_out[1:0]</obj_property>
+      <obj_property name="ObjectShortName">state_out[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ts_drivertoptb/uut/MASTER/data_clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">data_clk</obj_property>
+      <obj_property name="ObjectShortName">data_clk</obj_property>
+   </wvobject>
+</wave_config>
