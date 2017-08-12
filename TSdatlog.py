@@ -1,5 +1,6 @@
 #!/usr/bin/env python 
-
+# this program was used to log temperature data from the sensor. It reads the GPIO pins from the EVAL Board. It sends the GO signal 
+#to the FPGA via MON #15. 
 
 import RPi.GPIO as GPIO
 import time
