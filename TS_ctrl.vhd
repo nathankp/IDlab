@@ -31,19 +31,19 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity TS_ctrl is
     Port (
-			  data_clock : in  STD_LOGIC; --divided clock from master, keep controller and master synced
+	   data_clock : in  STD_LOGIC; --divided clock from master, keep controller and master synced
            Go : in  STD_LOGIC; --from TOP initiate communication with sensor
            pointer : in  STD_LOGIC_VECTOR(7 downto 0); -- register pointer byte
            mstr_state : in  STD_LOGIC_VECTOR (1 downto 0); --where along the transaction is the master?
-			  ack_error  : in  STD_LOGIC; --from master acknowledge error
+	   ack_error  : in  STD_LOGIC; --from master acknowledge error
            reset : in  STD_LOGIC; -- reset from TOP  
            data_rd : in  STD_LOGIC_VECTOR(7 downto 0); --read data byte from master
-			  ----master controls---
-			  mstr_ena : BUFFER  STD_LOGIC; --enable/disable master 
+	   ----master controls---
+	   mstr_ena : BUFFER  STD_LOGIC; --enable/disable master 
            rw : out  STD_LOGIC; --read/write command bit.
-			  data_wr : out STD_LOGIC_VECTOR(7 downto 0); -- to master data byte to send
-			  ---data output----
-			  Temperature : out  STD_LOGIC_VECTOR(15 downto 0) --full temperature reading
+	   data_wr : out STD_LOGIC_VECTOR(7 downto 0); -- to master data byte to send
+	   ---data output----
+	   Temperature : out  STD_LOGIC_VECTOR(15 downto 0) --full temperature reading
            );
 end TS_ctrl;
 
@@ -60,7 +60,7 @@ if (reset <= '0') then
 	LSB <= (others => '0'); --RESET LSB
 elsif (data_clock'EVENT and data_clock = '1') then 
   case mstr_state is
-	when "00" =>
+	when "00" => --when master is in Ready state
 		data_wr <= pointer;
 		rw <= '0';
 		IF (Go = '0' or mstr_ena = '1') then --if Go button is pushed down or mstr has been enabled.
@@ -69,13 +69,13 @@ elsif (data_clock'EVENT and data_clock = '1') then
 			mstr_ena <= '0'; --keep master disabled
 		END IF;
 
-	when "01" =>
+	when "01" => --master has sent the pointer byte
 		rw <= '1'; --send read command
 	
-	when "10" =>
+	when "10" => --master recevied MSB of temperature data
 		MSB <= data_rd; -- read temperature MSB
 		
-	when "11" =>
+	when "11" => --master has recieved LSB of temperature data
 		LSB <= data_rd; -- read temperature LSB
 		mstr_ena <= '0'; -- disable master
 	when others =>
